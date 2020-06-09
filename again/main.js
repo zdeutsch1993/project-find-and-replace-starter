@@ -28,11 +28,13 @@ replaceAllButton.addEventListener("click", function(){
         wham = getCellElements(rowElements[index])
         console.log(wham);
         for (let legend = 0; legend < wham.length; legend += 1){
-            console.log(wham[legend]);
-            if (wham[legend].innerText.includes(needInput)){
-                let microsoft = wham[legend].innerHTML;
+            let doubleWhammy = wham[legend].innerText
+            console.log(doubleWhammy);
+            if (doubleWhammy.includes(needInput)){
+                let xbox = wham[legend]
+                let microsoft = xbox.innerHTML;
                 let fix = microsoft.replace(needInput, changeInput)
-                wham[legend].innerHTML = fix;
+                xbox.innerHTML = fix;
 
             }
 
