@@ -22,16 +22,16 @@ function getCellElements (currentRowElement) {
 
 // YOUR CODE GOES HERE
 replaceAllButton.addEventListener("click", function(){
-    let enterInput = findInput.value
+    let needInput = findInput.value
     let changeInput = replaceInput.value
     for (let index = 0; index < rowElements.length; index += 1){
         wham = getCellElements(rowElements[index])
         console.log(wham);
         for (let legend = 0; legend < wham.length; legend += 1){
-            console.log(wham[legend].innerText);
-            if (wham[legend].innerText.includes(enterInput)){
+            console.log(wham[legend]);
+            if (wham[legend].innerText.includes(needInput)){
                 let microsoft = wham[legend].innerHTML;
-                let fix = microsoft.replace(enterInput, changeInput)
+                let fix = microsoft.replace(needInput, changeInput)
                 wham[legend].innerHTML = fix;
 
             }
